@@ -10,7 +10,7 @@
         let totalWeight = 0;
 
         // Get the tasks and weights from the input fields
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= 7; i++) {
           let task = document.getElementById(`task-${i}`).value;
           let weight = parseInt(document.getElementById(`weight-${i}`).value);
           tasks.push({ task, weight });
@@ -54,6 +54,30 @@
       <br><br>
       <label>Weight:</label>
       <input type="number" id="weight-3">
+      <br><br>
+      <label>Task 4:</label>
+      <input type="text" id="task-4">
+      <br><br>
+      <label>Weight:</label>
+      <input type="number" id="weight-4">
+      <br><br>
+      <label>Task 5:</label>
+      <input type="text" id="task-5">
+      <br><br>
+      <label>Weight:</label>
+      <input type="number" id="weight-5">
+      <br><br>
+      <label>Task 6:</label>
+      <input type="text" id="task-6">
+      <br><br>
+      <label>Weight:</label>
+      <input type="number" id="weight-6">
+      <br><br>
+      <label>Task 7:</label>
+      <input type="text" id="task-7">
+      <br><br>
+      <label>Weight:</label>
+      <input type="number" id="weight-7">
       <br><br>
       <button type="button" onclick="selectTask()">Select Task</button>
     </form>
