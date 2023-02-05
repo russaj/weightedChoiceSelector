@@ -28,7 +28,8 @@
       form.addEventListener("submit", function (event) {
         event.preventDefault();
         const taskName = document.getElementById("taskName").value;
-        const taskWeight = parseInt(document.getElementById("taskWeight").value);
+        let taskWeight = parseInt(document.getElementById("taskWeight").value);
+        taskWeight = taskWeight || 0;
         tasks.push({ taskName, taskWeight });
         totalWeightValue += taskWeight;
         totalWeight.innerHTML = `Total weight: ${totalWeightValue}`;
@@ -43,7 +44,7 @@
         for (let i = 0; i < tasks.length; i++) {
           currentWeight += tasks[i].taskWeight;
           if (randomWeight < currentWeight) {
-            selectedTask.innerHTML = `Selected task: ${tasks[i].taskName} (weight: ${tasks[i].taskWeight})`;
+            selectedTask.innerHTML = `Selected task: ${tasks[i].taskName} (generated weight: ${randomWeight})`;
             break;
           }
         }
